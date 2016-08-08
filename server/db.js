@@ -1,12 +1,11 @@
 var mongoose = require('mongoose');  //cross-platform embedded web servers, Single-threaded, asynchronous, non-blocking core with simple event-based API
 var moment = require('moment'); //Full featured date library for parsing, validating, manipulating, and formatting dates.
 var _ = require('underscore');  //utility library
-var uri = 'mongodb://garland:abc123@ds145415.mlab.com:45415/heroku_jcf6w2mv'
 
 //make list shorter to the following tasks on had call, coffee, texted, meal
 //first name, last name, relationship, phone number to add family member.
 
-mongoose.connect(uri);    //connect to MongoDB
+mongoose.connect('mongodb://garland:abc123@ds145415.mlab.com:45415/heroku_jcf6w2mv' || 'mongodb://localhost:27017');    //connect to MongoDB
 
 var db = mongoose.connection; //naming/variable chaining, convention
 
